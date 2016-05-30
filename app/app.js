@@ -15,7 +15,7 @@ var serverConfig = config.get('server');
 var serverIpConfig = serverConfig.ip;
 var serverPortConfig = parseInt(serverConfig.port, 10);
 
-app.set('views', __dirname + '/views');
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
@@ -33,6 +33,7 @@ app.get('/', function (req, res) {
 });
 
 // catch 404 and forward to error handler
+
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
