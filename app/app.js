@@ -12,6 +12,7 @@ var app = express();
 
 var config = require('config');
 var serverConfig = config.get('server');
+var serverIpConfig = serverConfig.ip;
 var serverPortConfig = parseInt(serverConfig.port, 10);
 
 app.set('views', __dirname + '/views');
@@ -65,6 +66,6 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-app.listen(serverPortConfig, serverConfig.ip, function () {
-  console.log('Chat app listening on port ' + serverPortConfig);
+app.listen(serverPortConfig, serverIpConfig, function () {
+  console.log('Chat app listening on ' + serverIpConfig + ':' + serverPortConfig);
 });
