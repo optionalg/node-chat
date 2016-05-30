@@ -7,17 +7,19 @@ $ sudo cp -R share/* /usr/local/share
 $ sudo cp bin/node /usr/local/bin/
 $ sudo ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm
 
-[Repo setup]
+[Initial setup]
 Created public repo on Github
 $ git clone https://github.com/plancake/node-chat.git
 $ cd node-chat
 $ mkdir app
 $ cd app
 $ npm init
-     name: node-chat
-     main: app.js
+     (name: node-chat)
+     (main: app.js)
 $ npm install express --save
-
+$ npm install config --save
+$ export NODE_ENV=production
+     (or ...=development)
 
 
 [Deploy on the server]
@@ -27,5 +29,6 @@ $ cd app
 $ npm install
 
 [Run app]
-$ su    (as it listens on port 80 you need to be root)
+$ su
+    (as it listens on port 80 you need to be root)
 $ node app.js
