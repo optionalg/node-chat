@@ -20,6 +20,8 @@ $ npm install express --save
 $ npm install config --save
 $ export NODE_ENV=production
      (or ...=development)
+$ npm install typescript --save
+$ npm install pug --save   
 
 
 [Deploy on the server]

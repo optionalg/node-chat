@@ -5,8 +5,11 @@ var config = require('config');
 var serverConfig = config.get('server');
 var serverPortConfig = parseInt(serverConfig.port);
 
+app.set('views', __dirname + '/views');
+app.set('view engine', 'pug');
+
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.render('index', { title : 'Home' });
 });
 
 app.get('/about', function (req, res) {
