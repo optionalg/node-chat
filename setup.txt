@@ -21,11 +21,11 @@ $ npm install express --save
 
 
 [Deploy on the server]
-$ cd
-$ git clone https://github.com/plancake/node-chat.git
-$ cd node-chat/app
+$ cd node-chat
+$ git pull
+$ cd app
 $ npm install
 
 [Run app]
 $ su    (as it listens on port 80 you need to be root)
-$ node node-chat/app/app.js
+$ node app.js
